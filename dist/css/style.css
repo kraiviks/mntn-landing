@@ -14,6 +14,14 @@ body {
 a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
+}
+
+a:hover {
+  color: black;
+  text-shadow: 0 0 10px white;
 }
 
 .header {
@@ -67,6 +75,14 @@ a {
   font-size: 32px;
   line-height: 38, 4px;
   text-transform: uppercase;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
+}
+
+.logo:hover {
+  color: black;
+  text-shadow: 0 0 10px white;
 }
 
 .section-header {
@@ -98,6 +114,8 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  margin: 0 auto;
+  width: 1400px;
 }
 
 .section-header {
@@ -232,6 +250,8 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 1400px;
 }
 
 .footer .footer__info .slogan {

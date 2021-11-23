@@ -18,6 +18,11 @@ body {
 a {
 	text-decoration: none;
 	font-family: "Roboto", sans-serif;
+	transition: 1s all;
+	&:hover {
+		color: black;
+		text-shadow: 0 0 10px white;
+	}
 }
 
 .header {
@@ -63,6 +68,11 @@ a {
 	font-size: 32px;
 	line-height: 38, 4px;
 	text-transform: uppercase;
+	transition: 1s all;
+	&:hover {
+		color: black;
+		text-shadow: 0 0 10px white;
+	}
 }
 
 .section-header {
@@ -105,6 +115,8 @@ a {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row;
+		margin: 0 auto;
+		width: 1400px;
 		@media (max-width: 1469.98px) {
 			width: initial;
 			padding: 0 50px;
@@ -241,10 +253,12 @@ a {
 .footer {
 	padding-top: 200px;
 	padding-bottom: 120px;
-	
+
 	.container {
 		display: flex;
 		justify-content: space-between;
+		margin: 0 auto;
+		width: 1400px;
 		@media (max-width: 1469.98px) {
 			width: initial;
 			padding: 0 50px;
