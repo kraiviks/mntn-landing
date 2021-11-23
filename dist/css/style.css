@@ -16,11 +16,6 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
-.container {
-  margin: 0 auto;
-  width: 1462px;
-}
-
 .header {
   padding: 30px 0;
   position: fixed;
@@ -291,17 +286,20 @@ a {
 }
 
 @media (max-width: 1469.98px) {
-  .container {
+  .section-one .container,
+  .section-two .container,
+  .section-three .container {
+    width: initial;
+    padding: 0 50px;
+  }
+
+  .footer .container {
     width: initial;
     padding: 0 50px;
   }
 }
 
 @media (max-width: 991.98px) {
-  .container {
-    width: 370px;
-  }
-
   .header .header__nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -357,7 +355,7 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 370px;
+    width: initial;
   }
 
   .section-one .container .section__content-wrap .section-number,

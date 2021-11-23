@@ -7,6 +7,7 @@ $section-bg: #0b1d26;
 	margin: 0;
 	padding: 0;
 	color: $color-primary;
+	// border: 1px solid red;
 }
 
 html,
@@ -18,22 +19,6 @@ a {
 	text-decoration: none;
 	font-family: "Roboto", sans-serif;
 }
-
-.container {
-	margin: 0 auto;
-	width: 1462px;
-	@media (max-width: 991.98px) {
-		width: 370px;
-	}
-	@media (max-width: 1469.98px) {
-		width: initial;
-		padding: 0 50px;
-	}
-}
-
-// *{
-// 	border: 1px solid red;
-// }
 
 .header {
 	padding: 30px 0;
@@ -120,9 +105,13 @@ a {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row;
+		@media (max-width: 1469.98px) {
+			width: initial;
+			padding: 0 50px;
+		}
 		@media (max-width: 991.98px) {
 			flex-direction: column;
-			width: 370px;
+			width: initial;
 			.section__content-wrap {
 				.section-number {
 					float: right;
@@ -252,9 +241,14 @@ a {
 .footer {
 	padding-top: 200px;
 	padding-bottom: 120px;
+	
 	.container {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: 1469.98px) {
+			width: initial;
+			padding: 0 50px;
+		}
 		@media (max-width: 991.98px) {
 			display: flex;
 			flex-direction: column;
