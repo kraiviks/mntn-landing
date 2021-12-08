@@ -15,11 +15,11 @@
 				<a href="#scroll1">Get started</a>
 				<a href="#scroll2">Hiking essentials</a>
 				<a href="#scroll3">where you go is the key</a>
+				<div class="header__login">
+					<img src="img/account.svg" alt="account-ico" />
+					<div class="login" id="login">Account</div>
+				</div>
 			</nav>
-			<div class="header__login">
-				<img src="img/account.svg" alt="account-ico" />
-				<div class="login-text">Account</div>
-			</div>
 		</header>
 		<section class="section-header" id="scroll0">
 			<div class="social-links">
@@ -149,6 +149,27 @@
 				</div>
 			</div>
 		</footer>
+		<div class="modal-auth">
+			<form action="" class="form-auth">
+				<input
+					type="text"
+					name="email"
+					id="email"
+					placeholder="email:"
+				/>
+				<input
+					type="text"
+					name="password"
+					id="password"
+					placeholder="password:"
+				/>
+				<button type="submit" style="color: black">Войти</button>
+			</form>
+		</div>
+		<div class="alert-info">
+			<div class="alert-text">Text alert</div>
+			<button id="close-alert">Close</button>
+		</div>
 		<script src="js/script.min.js"></script>
 	</body>
 </html>
