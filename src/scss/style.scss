@@ -231,6 +231,9 @@ a {
 	flex-direction: column;
 	max-width: 632px;
 	//position: absolute;
+	@media (max-width: 1468px) {
+		padding: 50px;
+	}
 	@media (max-width: 991.98px) {
 	}
 	med .section-number {
@@ -420,7 +423,10 @@ a {
 			@media (min-width: 361px) and (max-width: 375px) {
 				width: 375px;
 			}
-			@media (min-width: 376px) and (max-width: 411px) {
+			@media (min-width: 376px) and (max-width: 393px) {
+				width: 395px;
+			}
+			@media (min-width: 394px) and (max-width: 411px) {
 				width: 415px;
 			}
 			@media (min-width: 412px) and (max-width: 414px) {
@@ -430,6 +436,9 @@ a {
 				width: 365px;
 			}
 			@media (min-width: 414px) and (max-width: 540px) {
+				width: 420px;
+			}
+			@media (min-width: 539px) and (max-width: 540px) {
 				width: 540px;
 			}
 			@media (min-width: 541px) and (max-width: 768px) {
@@ -474,6 +483,18 @@ a {
 			background-color: rgba(27, 26, 26, 0.527);
 			border: 1px solid rgba(27, 26, 26, 0.527);
 			box-shadow: 1px 1px 10px black;
+		}
+	}
+}
+
+@media (min-width: 1023px) and (max-width: 1024px) {
+	.section-three {
+		.image-wrap {
+			position: relative;
+			left: -3%;
+			img {
+				width: 500px;
+			}
 		}
 	}
 }
