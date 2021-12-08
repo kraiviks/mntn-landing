@@ -61,3 +61,62 @@ const alertInfo = () => {
 };
 
 alertInfo();
+
+//Slider
+
+function slider() {
+	const sliderItems = document.querySelector(".slider__items");
+	const controlItem = document.querySelectorAll(".control__item");
+
+	let offset = 0;
+	function switchSlider(offset) {
+		switch (offset) {
+			case 0:
+				controlItem[0].classList.add("control__item-active");
+				controlItem[1].classList.remove("control__item-active");
+				controlItem[2].classList.remove("control__item-active");
+				break;
+			case -100:
+				controlItem[0].classList.remove("control__item-active");
+				controlItem[1].classList.add("control__item-active");
+				controlItem[2].classList.remove("control__item-active");
+				break;
+			case -200:
+				controlItem[0].classList.remove("control__item-active");
+				controlItem[1].classList.remove("control__item-active");
+				controlItem[2].classList.add("control__item-active");
+				break;
+
+			default:
+				break;
+		}
+	}
+	let sliderInterval = setInterval(() => {
+		offset = offset - 100;
+		if (offset < -200) {
+			offset = 0;
+		}
+		sliderItems.style.left = offset + "%";
+
+		//control-items
+		switchSlider(offset);
+	}, 4000);
+
+	controlItem[0].addEventListener("click", () => {
+		offset = 0;
+		sliderItems.style.left = offset + "%";
+		switchSlider(offset);
+	});
+	controlItem[1].addEventListener("click", () => {
+		offset = -100;
+		sliderItems.style.left = offset + "%";
+		switchSlider(offset);
+	});
+	controlItem[2].addEventListener("click", () => {
+		offset = -200;
+		sliderItems.style.left = offset + "%";
+		switchSlider(offset);
+	});
+}
+
+slider();
