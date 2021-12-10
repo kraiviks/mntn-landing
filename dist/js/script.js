@@ -147,21 +147,30 @@ const sliderV2 = () => {
 
 		slides[slideIndex - 1].style.display = "flex";
 
-		controlItem[0].addEventListener("click", () => {
-			slideIndex = 1;
-			showSlide(slideIndex);
-			switchSlider(slideIndex);
+		controlItem.forEach((item, index) => {
+			item.addEventListener("click", () => {
+				slideIndex = index + 1;
+				showSlide(slideIndex);
+				switchSlider(slideIndex);
+			});
 		});
-		controlItem[1].addEventListener("click", () => {
-			slideIndex = 2;
-			showSlide(slideIndex);
-			switchSlider(slideIndex);
-		});
-		controlItem[2].addEventListener("click", () => {
-			slideIndex = 3;
-			showSlide(slideIndex);
-			switchSlider(slideIndex);
-		});
+
+		// controlItem[0].addEventListener("click", () => {
+		// 	slideIndex = 1;
+		// 	showSlide(slideIndex);
+		// 	switchSlider(slideIndex);
+		// 	clearInterval
+		// });
+		// controlItem[1].addEventListener("click", () => {
+		// 	slideIndex = 2;
+		// 	showSlide(slideIndex);
+		// 	switchSlider(slideIndex);
+		// });
+		// controlItem[2].addEventListener("click", () => {
+		// 	slideIndex = 3;
+		// 	showSlide(slideIndex);
+		// 	switchSlider(slideIndex);
+		// });
 	}
 
 	function switchSlider(slideIndex) {
