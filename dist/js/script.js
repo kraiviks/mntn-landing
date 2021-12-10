@@ -62,26 +62,117 @@ const alertInfo = () => {
 
 alertInfo();
 
-//Slider
+//SliderV1
 
-function slider() {
-	const sliderItems = document.querySelector(".slider__items");
+// function sliderV1() {
+// 	const sliderItems = document.querySelector(".slider__items");
+// 	const controlItem = document.querySelectorAll(".control__item");
+
+// 	let offset = 0;
+// 	function switchSlider(offset) {
+// 		switch (offset) {
+// 			case 0:
+// 				controlItem[0].classList.add("control__item-active");
+// 				controlItem[1].classList.remove("control__item-active");
+// 				controlItem[2].classList.remove("control__item-active");
+// 				break;
+// 			case -100:
+// 				controlItem[0].classList.remove("control__item-active");
+// 				controlItem[1].classList.add("control__item-active");
+// 				controlItem[2].classList.remove("control__item-active");
+// 				break;
+// 			case -200:
+// 				controlItem[0].classList.remove("control__item-active");
+// 				controlItem[1].classList.remove("control__item-active");
+// 				controlItem[2].classList.add("control__item-active");
+// 				break;
+
+// 			default:
+// 				break;
+// 		}
+// 	}
+// 	let sliderInterval = setInterval(() => {
+// 		offset = offset - 100;
+// 		if (offset < -200) {
+// 			offset = 0;
+// 		}
+// 		sliderItems.style.left = offset + "%";
+
+// 		//control-items
+// 		switchSlider(offset);
+// 	}, 4000);
+
+// 	controlItem[0].addEventListener("click", () => {
+// 		offset = 0;
+// 		sliderItems.style.left = offset + "%";
+// 		switchSlider(offset);
+// 	});
+// 	controlItem[1].addEventListener("click", () => {
+// 		offset = -100;
+// 		sliderItems.style.left = offset + "%";
+// 		switchSlider(offset);
+// 	});
+// 	controlItem[2].addEventListener("click", () => {
+// 		offset = -200;
+// 		sliderItems.style.left = offset + "%";
+// 		switchSlider(offset);
+// 	});
+// }
+
+// sliderV1();
+
+//SliderV2
+
+const sliderV2 = () => {
+	let slideIndex = 1;
 	const controlItem = document.querySelectorAll(".control__item");
 
-	let offset = 0;
-	function switchSlider(offset) {
-		switch (offset) {
-			case 0:
+	function showSlide(n) {
+		let slides = document.getElementsByClassName("item");
+
+		if (n > slides.length) {
+			slideIndex = 1;
+		}
+		if (n < 1) {
+			slideIndex = slides.length;
+		}
+
+		for (let slide of slides) {
+			slide.style.display = "none";
+		}
+
+		slides[slideIndex - 1].style.display = "flex";
+
+		controlItem[0].addEventListener("click", () => {
+			slideIndex = 1;
+			showSlide(slideIndex);
+			switchSlider(slideIndex);
+		});
+		controlItem[1].addEventListener("click", () => {
+			slideIndex = 2;
+			showSlide(slideIndex);
+			switchSlider(slideIndex);
+		});
+		controlItem[2].addEventListener("click", () => {
+			slideIndex = 3;
+			showSlide(slideIndex);
+			switchSlider(slideIndex);
+		});
+	}
+
+	function switchSlider(slideIndex) {
+		switch (slideIndex) {
+			case 1:
 				controlItem[0].classList.add("control__item-active");
 				controlItem[1].classList.remove("control__item-active");
 				controlItem[2].classList.remove("control__item-active");
 				break;
-			case -100:
+			case 2:
 				controlItem[0].classList.remove("control__item-active");
 				controlItem[1].classList.add("control__item-active");
 				controlItem[2].classList.remove("control__item-active");
 				break;
-			case -200:
+			case 3:
 				controlItem[0].classList.remove("control__item-active");
 				controlItem[1].classList.remove("control__item-active");
 				controlItem[2].classList.add("control__item-active");
@@ -91,32 +182,13 @@ function slider() {
 				break;
 		}
 	}
-	let sliderInterval = setInterval(() => {
-		offset = offset - 100;
-		if (offset < -200) {
-			offset = 0;
-		}
-		sliderItems.style.left = offset + "%";
 
-		//control-items
-		switchSlider(offset);
-	}, 4000);
+	const slideInterval = setInterval(() => {
+		showSlide((slideIndex += 1));
+		switchSlider(slideIndex);
+	}, 5000);
 
-	controlItem[0].addEventListener("click", () => {
-		offset = 0;
-		sliderItems.style.left = offset + "%";
-		switchSlider(offset);
-	});
-	controlItem[1].addEventListener("click", () => {
-		offset = -100;
-		sliderItems.style.left = offset + "%";
-		switchSlider(offset);
-	});
-	controlItem[2].addEventListener("click", () => {
-		offset = -200;
-		sliderItems.style.left = offset + "%";
-		switchSlider(offset);
-	});
-}
+	showSlide(slideIndex);
+};
 
-slider();
+sliderV2();
