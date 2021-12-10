@@ -58,6 +58,10 @@ const alertInfo = () => {
 	closeButton.addEventListener("click", function () {
 		alertDiv.classList.remove("alert-info-active");
 	});
+
+	setTimeout(() => {
+		alertDiv.classList.remove("alert-info-active");
+	}, 7000);
 };
 
 alertInfo();
@@ -186,7 +190,7 @@ const sliderV2 = () => {
 	const slideInterval = setInterval(() => {
 		showSlide((slideIndex += 1));
 		switchSlider(slideIndex);
-	}, 5000);
+	}, 3500);
 
 	showSlide(slideIndex);
 };
