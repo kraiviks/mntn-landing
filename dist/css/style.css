@@ -191,6 +191,7 @@ a:hover {
   -ms-flex-align: center;
   align-items: center;
   color: #fbd784;
+  height: 50px;
 }
 
 .up-title::before {

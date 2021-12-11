@@ -188,7 +188,7 @@ a {
 	display: flex;
 	align-items: center;
 	color: $color-secondary;
-
+	height: 50px;
 	&::before {
 		content: "";
 		display: block;
