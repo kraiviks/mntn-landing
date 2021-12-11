@@ -365,10 +365,10 @@ a:hover {
   align-items: center;
   height: 200px;
   padding: 30px 50px;
-  border-radius: 36px;
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-box-shadow: 1px 1px 100px #00ff1f;
-  box-shadow: 1px 1px 100px #00ff1f;
+  border-radius: 36px 36px 0;
+  background-color: #7a7d85;
+  -webkit-box-shadow: 1px 1px 100px #ffff;
+  box-shadow: 1px 1px 100px #ffff;
 }
 
 .form-auth input {
@@ -383,6 +383,7 @@ a:hover {
   border-radius: 10px;
   padding: 10px 30px;
   background-color: #6da184;
+  cursor: pointer;
 }
 
 .alert-info {
@@ -443,8 +444,8 @@ a:hover {
   justify-content: center;
   -webkit-animation-name: fade;
   animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 .slider .control__items {
@@ -466,9 +467,9 @@ a:hover {
   -webkit-box-shadow: 1px 1px 10px white;
   box-shadow: 1px 1px 10px white;
   border-radius: 50%;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
 }
 
 .slider .control__items .control__item-active {
@@ -479,22 +480,58 @@ a:hover {
 }
 
 @-webkit-keyframes fade {
-  from {
+  0% {
     opacity: 0.4;
+    position: relative;
+    top: -100%;
   }
 
-  to {
+  45% {
     opacity: 1;
+    position: relative;
+    top: 0%;
+  }
+
+  60% {
+    opacity: 1;
+    position: relative;
+    top: -10%;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0%;
   }
 }
 
 @keyframes fade {
-  from {
+  0% {
     opacity: 0.4;
+    position: relative;
+    top: -100%;
   }
 
-  to {
+  45% {
     opacity: 1;
+    position: relative;
+    top: 0%;
+  }
+
+  60% {
+    opacity: 1;
+    position: relative;
+    top: -10%;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0%;
   }
 }
 

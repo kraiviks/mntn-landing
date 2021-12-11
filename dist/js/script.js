@@ -151,7 +151,7 @@ const sliderV2 = () => {
 			item.addEventListener("click", () => {
 				slideIndex = index + 1;
 				showSlide(slideIndex);
-				switchSlider(slideIndex);
+				switchSlide(slideIndex);
 			});
 		});
 
@@ -173,7 +173,7 @@ const sliderV2 = () => {
 		// });
 	}
 
-	function switchSlider(slideIndex) {
+	function switchSlide(slideIndex) {
 		switch (slideIndex) {
 			case 1:
 				controlItem[0].classList.add("control__item-active");
@@ -198,8 +198,8 @@ const sliderV2 = () => {
 
 	const slideInterval = setInterval(() => {
 		showSlide((slideIndex += 1));
-		switchSlider(slideIndex);
-	}, 3500);
+		switchSlide(slideIndex);
+	}, 5000);
 
 	showSlide(slideIndex);
 };

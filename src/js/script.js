@@ -199,7 +199,7 @@ const sliderV2 = () => {
 	const slideInterval = setInterval(() => {
 		showSlide((slideIndex += 1));
 		switchSlide(slideIndex);
-	}, 3500);
+	}, 5000);
 
 	showSlide(slideIndex);
 };
