@@ -423,7 +423,7 @@ a:hover {
   position: fixed;
   bottom: 50px;
   right: 50px;
-  border-radius: 30px;
+  border-radius: 0 30px;
   background-color: #f1f1f18c;
 }
 
