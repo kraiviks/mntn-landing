@@ -256,8 +256,6 @@ a {
 
 .footer {
 	padding-top: 200px;
-	padding-bottom: 120px;
-
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -325,9 +323,10 @@ a {
 // Modal auth
 
 .modal-auth {
+	position: fixed;
+	top: -100%;
 	display: hidden;
 	opacity: 0;
-	transition: all 1s;
 }
 
 .modal-auth-active {
@@ -339,6 +338,7 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 1s;
 	opacity: 100;
 	background-color: #0b1d2685;
 }
@@ -371,7 +371,6 @@ a {
 .alert-info {
 	display: hidden;
 	opacity: 0;
-	transition: all 1s;
 	position: relative;
 	.alert-text {
 		color: black;
@@ -396,6 +395,7 @@ a {
 	right: 50px;
 	border-radius: 0 30px;
 	background-color: #f1f1f18c;
+	transition: all 1s;
 }
 
 //Slider

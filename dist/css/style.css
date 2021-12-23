@@ -258,7 +258,6 @@ a:hover {
 
 .footer {
   padding-top: 200px;
-  padding-bottom: 120px;
   background-color: #0b1d26;
 }
 
@@ -325,11 +324,10 @@ a:hover {
 }
 
 .modal-auth {
+  position: fixed;
+  top: -100%;
   display: hidden;
   opacity: 0;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
 }
 
 .modal-auth-active {
@@ -347,6 +345,9 @@ a:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
   opacity: 100;
   background-color: #0b1d2685;
 }
@@ -390,9 +391,6 @@ a:hover {
 .alert-info {
   display: hidden;
   opacity: 0;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
   position: relative;
 }
 
@@ -425,6 +423,9 @@ a:hover {
   right: 50px;
   border-radius: 0 30px;
   background-color: #f1f1f18c;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .slider {
