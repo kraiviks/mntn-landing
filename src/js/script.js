@@ -143,6 +143,11 @@ window.addEventListener("DOMContentLoaded", () => {
 		let slideIndex = 1;
 		const controlItem = document.querySelectorAll(".control__item");
 
+		const slideInterval = setInterval(() => {
+			showSlide((slideIndex += 1));
+			switchSlide(slideIndex);
+		}, 5000);
+
 		function showSlide(n) {
 			let slides = document.getElementsByClassName("item");
 
@@ -161,6 +166,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 			controlItem.forEach((item, index) => {
 				item.addEventListener("click", () => {
+					clearInterval(slideInterval);
 					slideIndex = index + 1;
 					showSlide(slideIndex);
 					switchSlide(slideIndex);
@@ -190,11 +196,6 @@ window.addEventListener("DOMContentLoaded", () => {
 					break;
 			}
 		}
-
-		const slideInterval = setInterval(() => {
-			showSlide((slideIndex += 1));
-			switchSlide(slideIndex);
-		}, 5000);
 
 		showSlide(slideIndex);
 	}
